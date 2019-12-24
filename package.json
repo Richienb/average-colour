@@ -1,6 +1,6 @@
 {
     "name": "image-average-colour",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Find the average colour of an image.",
     "repository": "https://github.com/Richienb/image-average-colour.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
