@@ -1,7 +1,20 @@
 "use strict"
 
-module.exports = (input, { postfix = "rainbows" } = {}) => {
-    if (typeof input !== "string") throw new TypeError(`Expected a string, got ${typeof input}`)
+const pify = require("pify")
+const averageColour = pify(require("image-average-color"))
+const is = require("@sindresorhus/is")
+const rgbHex = require("rgb-hex")
 
-    return `${input} & ${postfix}`
+module.exports = async (path) => {
+    if (!is.string(path)) throw new TypeError("`path` is not a string!")
+
+    const [red, green, blue] = await averageColour(path)
+
+    return {
+        red,
+        green,
+        blue,
+        rgb: `rgb(${red}, ${green}, ${blue})`,
+        hex: `#${rgbHex(red, green, blue)}`,
+    }
 }

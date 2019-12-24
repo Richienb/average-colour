@@ -1,41 +1,32 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Image Average Colour [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/image-average-colour/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/image-average-colour)
 
-My awesome module.
+Find the average colour of an image.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/image-average-colour.png)](https://npmjs.com/package/image-average-colour)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install image-average-colour
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const imageAverageColour = require("image-average-colour");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+(async () => {
+    await imageAverageColour("test/image.png")
+    //=> { red: 3, green: 3, blue: 3, rgb: 'rgb(3, 3, 3)', hex: '#030303' }
+})()
 ```
 
 ## API
 
-### theModule(input, options?)
+### imageAverageColour(path)
 
-#### input
+#### path
 
 Type: `string`
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The path to the image.

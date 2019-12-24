@@ -1,8 +1,8 @@
 {
-    "name": "the-module",
+    "name": "image-average-colour",
     "version": "0.0.0",
-    "description": "My awesome module.",
-    "repository": "https://github.com/Richienb/the-module.git",
+    "description": "Find the average colour of an image.",
+    "repository": "https://github.com/Richienb/image-average-colour.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
     "main": "index.js",
@@ -11,21 +11,32 @@
         "index.d.ts"
     ],
     "engines": {
-        "node": ">=8"
+        "node": ">=7.6"
     },
     "scripts": {
         "lint": "xo",
         "test": "yarn lint && ava"
     },
-    "keywords": [],
-    "dependencies": {},
+    "keywords": [
+        "image",
+        "colour",
+        "average",
+        "hex",
+        "rgb"
+    ],
+    "dependencies": {
+        "@sindresorhus/is": "^1.2.0",
+        "image-average-color": "^1.0.0",
+        "pify": "^4.0.1",
+        "rgb-hex": "^3.0.0"
+    },
     "devDependencies": {
-        "ava": "^2.1.0",
+        "ava": "^2.4.0",
         "eslint-config-richienb": "^0.2.3",
         "xo": "^0.25.3"
     },
     "resolutions": {
-        "eslint": "^6.6.0"
+        "eslint": "^6.8.0"
     },
     "xo": {
         "extends": "richienb/node"
