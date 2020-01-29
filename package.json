@@ -25,7 +25,7 @@
         "rgb"
     ],
     "dependencies": {
-        "@sindresorhus/is": "^1.2.0",
+        "@sindresorhus/is": "^2.0.0",
         "image-average-color": "^1.0.0",
         "pify": "^4.0.1",
         "rgb-hex": "^3.0.0"
